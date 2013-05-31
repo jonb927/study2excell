@@ -2,11 +2,10 @@
 
             <div class="span12" id="footer">
                 <div class="span12" id="topfoot">
-                    <h3>Quick Links</h3>
+                    <h2>Quick Links</h2>
                     <ul>
-                        <li><a href="">Vestibulum lobortis massa</a></li>
-                        <li><a href="">Aliquam malesuada</a></li>
-                        <li><a href="">Nullam rhoncus</a></li> 
+                        <li><a href="mailto:jonb927@fullsail.edu">Help us Debug. Email us</a></li>
+                        <li><a href="https://docs.google.com/forms/d/11JvfqMi4bVgGU099t1f8At5tNFrTM6PuVSJ-DFzfWNw/viewform">User Survey</a></li>
                         <li><a href="http://localhost:8888/index.php/s2e/tips">Tips</a></li>
                         <li><a href="http://localhost:8888/index.php/s2e/strack">sTrack</a></li>
                         <li><a href="http://localhost:8888/index.php/s2e/howdoyoulearn">How Do You Learn</li> 

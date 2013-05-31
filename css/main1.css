@@ -1,21 +1,21 @@
-h2{
-	font: 3.75em 'Bell MT';
-	font-style: italic;
-	color: #FE291F;
+h3{
+  font: 3.75em 'Bell MT';
+  font-style: italic;
+  color: #FE291F;
 }
 
 h1{
-	font: 2.5em 'Palatino Linotype';
-	color: #FF8400;
+  font: 2.5em 'Palatino Linotype';
+  color: #FF8400;
 }
-h3{
-	font: 1.875em 'Palatino Linotype';
-	color: #40C1E5;
+h2{
+  font: 1.875em 'Palatino Linotype';
+  color: #40C1E5;
 }
 h4{
-	font: 3.125em 'Bell MT';
-	font-style: italic;
-	color: #777;
+  font: 3.125em 'Bell MT';
+  font-style: italic;
+  color: #777;
 }
 h5{
   font: 3.125em 'Corbel';
@@ -26,25 +26,25 @@ h6{
   color: #555;
 }
 p{
-	font: 1em 'Century Gothic';
-	color: #393939;
+  font: 1em 'Century Gothic';
+  color: #393939;
 }
 a{
-	color: #40C1E5;
-	text-decoration: none;
+  color: #40C1E5;
+  text-decoration: none;
 }
 #BG{
   background-image: url(../images/mainBGV001.png);
 }
 #header{
-	height: 110px;
+  height: 110px;
     background: url(../images/headerBGV001.png) no-repeat;
 }
 #logo img{
-	padding: 2.02% 4.553191%;
+  padding: 2.02% 4.553191%;
 }
 #header p{
-	font: 1.6em 'Bell MT';
+  font: 1.6em 'Bell MT';
     color: #fff;
     padding: 5%;
     text-align: right;
@@ -60,9 +60,20 @@ nav ul{
     text-align: right;
     list-style-type: none;
 }
+#adminnav ul{
+   margin: 0 2.083333%;
+    float: right;
+    width: 100%;
+    text-align: right;
+    list-style-type: none;
+}
 nav ul li{
     float: left;
     width: 16.666666%;
+}
+#adminnav ul li{
+  float: left;
+    width: 33%;
 }
 nav ul li a{
     display: block;
@@ -74,7 +85,7 @@ nav ul li a{
 }
 nav a:hover{
     color: #40C1E5;
-	text-decoration: none;
+  text-decoration: none;
 }
 nav a:active{
     color: #40C1E5;
@@ -141,20 +152,20 @@ cite{
      background-size: 99% 100%;
 }
 #maincta img{
-	padding: 5% 15%;
+  padding: 5% 15%;
     width: 75%;
 }
 #maincta h2{
-	padding: 6% 0 0 0;
+  padding: 6% 0 0 0;
 }
 #maincta p{
-	padding: 0 16% 0 0;
-	font-size: 1.125em;
+  padding: 0 16% 0 0;
+  font-size: 1.125em;
 }
 #subcta{
-	 background-image: url(../images/subCtaBGV001.png);
-	 background-position: center center;
-	 background-repeat: no-repeat;
+   background-image: url(../images/subCtaBGV001.png);
+   background-position: center center;
+   background-repeat: no-repeat;
      background-size: 100% 106%;
      height: 400px;
 }
@@ -162,8 +173,8 @@ cite{
   text-align: center;
   margin: 3% 0 0 0;
 }
-#subcta h3{
-  margin: 3% 0 0 5%;
+#subcta h2{
+  margin: 3% 0 0 10%;
   width: 90%;
 }
 #subcta p{
@@ -171,9 +182,9 @@ cite{
   width: 90%;
 }
 #subcta1{
-	 background-image: url(../images/subCtaBG2V001.png);
-	 background-position: center center;
-	 background-repeat: no-repeat;
+   background-image: url(../images/subCtaBG2V001.png);
+   background-position: center center;
+   background-repeat: no-repeat;
      background-size: 100% 106%;
      height: 400px;
 }
@@ -181,8 +192,8 @@ cite{
   text-align: center;
   margin: 6% 0 0 0;
 }
-#subcta1 h3{
-  margin: 6% 0 0 10%;
+#subcta1 h2{
+  margin: 6% 0 0 20%;
   width: 80%;
 }
 #subcta1 p{
@@ -202,23 +213,23 @@ cite{
     height: 210px;
 }
 #topfoot a{
-	color: #2e77a1;
-	font-size: 1.125em;
-	text-decoration: none;
-	line-height: 35px;
+  color: #2e77a1;
+  font-size: 1.125em;
+  text-decoration: none;
+  line-height: 35px;
 }
 #topfoot a:hover{
-	color: #fff;
+  color: #fff;
 }
 #topfoot ul{
-	list-style-type: none;
+  list-style-type: none;
 }
 #topfoot ul li{
-	display: inline-block;
-	width: 30%;
+  display: inline-block;
+  width: 30%;
 }
 #topfoot h2{
-	color: #fff;
+  color: #fff;
 }
 #botfoot{
     font: .75em 'Century Gothic';
@@ -227,11 +238,11 @@ cite{
     text-align: center;
 }
 #botfoot p{
-	line-height: 70px;
+  line-height: 70px;
 }
 
 #TOTD img{
-	padding: 1% 13%;
+  padding: 1% 13%;
 
 }
 #TOTD{
@@ -239,8 +250,8 @@ cite{
   width: 60%;
 }
 
-#hdylvid img{
-  padding: 1% 13%;
+#hdylvid {
+text-align: center;
 
 }
 
@@ -248,26 +259,26 @@ cite{
   margin: 0 17.8%;
 }
 #strackbtn{
-	list-style-type: none;
-	width: 70%;
-	margin: 0 auto;
-	padding: 3% 0 18% 2.5%;
+  list-style-type: none;
+  width: 70%;
+  margin: 0 auto;
+  padding: 3% 0 18% 2.5%;
 
 }
 #strackbtn li{
-	text-align: center; 
-	width: 45%;
-	height: 130px;
+  text-align: center; 
+  width: 45%;
+  height: 130px;
 }
 #strackbtn a{
-	color: #fff;
-	font-size: 60px;
-	line-height: 1;
-	text-decoration: none;
+  color: #fff;
+  font-size: 60px;
+  line-height: 1;
+  text-decoration: none;
 }
 
 #newstrack{
-	float: left;
+  float: left;
   background-color: #006dcc;
   *background-color: #FE291F;
   background-image: -moz-linear-gradient(top, #FE291F, #B21D16);
@@ -294,7 +305,7 @@ cite{
   box-shadow: -1px 0 1px 0 #AAAAAA, 1px 0 1px 0 #AAAAAA, 0 2px 0 0 #AAAAAA;
 }
 #updatestrack{
-	float: right;
+  float: right;
   background-color: #006dcc;
   *background-color: #40C1E5;
   background-image: -moz-linear-gradient(top, #40C1E5, #33A3C2);
@@ -320,13 +331,16 @@ cite{
 #updatestrack:active{
   box-shadow: -1px 0 1px 0 #AAAAAA, 1px 0 1px 0 #AAAAAA, 0 2px 0 0 #AAAAAA;
 }
-#login, #contact, #register, #subject, #nstrack, #articles{
+#login, #logout, #contact, #register, #subject, #nstrack, #articles, #adminarticle{
   height: 400px;
   background-image: url(../images/formBGV001.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size:  98% 100%;
   padding: 4% 0 10%;
+}
+#adminarticle{
+  height: 200px;
 }
 #articles{
   height: 600px;
@@ -356,11 +370,11 @@ cite{
 #subject h5, #nstrack h5, #nstrack h5, #articles h5{
   padding: 2% 4% 0 15%;
 }
-#login p, #contact p, #login p, #register p, #subject p, #nstrack p, #articles p{
+#login p, #logout p, #contact p, #login p, #register p, #subject p, #nstrack p, #articles p{
   font: 28px 'Corbel';
  padding: 0 0 0 8%;
 }
-#login form, #register form, #articles form{
+#login form, #logout form, #register form, #articles form{
   padding: 5% 0 5% 10%;
 }
 #contact form{
@@ -369,11 +383,11 @@ cite{
 #subject form, #nstrack form{
   padding: 1% 0 5% 15%;
  }
-#login label, #contact label, #register label, #subject label, #nstrack label, #articles label{
+#login label, #logout label, #contact label, #register label, #subject label, #nstrack label, #articles label{
   font: 2.1875em 'Corbel';
   color: #555;
 }
-#login input, #contact input, #register input, #subject input, #nstrack input, #articles input{
+#login input, #logout input, #contact input, #register input, #subject input, #nstrack input, #articles input{
   border-radius: 10px;
   border-top-color: #FFBB72;
   border-right-color: #FFBB72;
@@ -388,18 +402,18 @@ cite{
 #register a{
   padding:0;
 }
-#login ul, #contact ul, #register ul, #subject ul, #nstrack ul, #articles ul{
+#login ul, #logout ul, #contact ul, #register ul, #subject ul, #nstrack ul, #articles ul, #adminarticle ul{
   margin: 0;
   width: 95%;
 }
-#login ul li, #contact ul li, #register ul li, #subject ul li, #nstrack ul li, #articles ul li{
+#login ul li, #logout ul li, #contact ul li, #register ul li, #subject ul li, #nstrack ul li, #articles ul li, #adminarticle ul li{
   list-style-type: none;
   width: 100%;
 }
 #subject ul li{
   padding: 0 0 2% 0;
 }
-#login button, #contact button, #register button, #subject button, #nstrack button, #articles button{
+#login button, #logout button, #contact button, #register button, #subject button, #nstrack button, #articles button{
   line-height: 45px;
   width: 130px;
   margin: 0 0 0 47.5%;
@@ -417,7 +431,7 @@ cite{
   border-radius: 20px;
   box-shadow: 0px 3px 2px 2px #AAAAAA, 1px 0 1px 0 #AAAAAA, 0 2px 0 0 #AAAAAA;
 }
-#login button:hover, #contact button:hover, #register button:hover, #subject button:hover, #nstrack button:hover, #articles button:hover{
+#login button:hover, #logout button:hover, #contact button:hover, #register button:hover, #subject button:hover, #nstrack button:hover, #articles button:hover{
    background-image: -moz-linear-gradient(top, #FF5D55, #FE291F);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF5D55), to(#FE291F));
   background-image: -webkit-linear-gradient(top, #FF5D55, #FE291F);
@@ -425,7 +439,7 @@ cite{
   background-image: linear-gradient(to bottom, #FF5D55, #FE291F);
 
 }
-#login button:active, #contact button:active, #register button:active, #subject button:active, #nstrack button:active, #articles button:active{
+#login button:active, #logout button:active, #contact button:active, #register button:active, #subject button:active, #nstrack button:active, #articles button:active{
   box-shadow: -1px 0 1px 0 #AAAAAA, 1px 0 1px 0 #AAAAAA, 0 2px 0 0 #AAAAAA;
 }
 #contact button{
@@ -478,9 +492,20 @@ margin: 0 0 2.5% 4.5%;
 #emailfrom{
   margin: 0 0 2.5% 10.75%;
 }
+#contact textarea{
+   margin: -6% 28% 3% 25%;
+}
 #message{
  
   margin: -6% 28% 3% 0%;
+  border-radius: 10px;
+  border-top-color: #FFBB72;
+  border-right-color: #FFBB72;
+  border-bottom-color: #FF8400;
+  border-left-color: #FF8400;
+  border-width: 3px;
+}
+#articles select{
   border-radius: 10px;
   border-top-color: #FFBB72;
   border-right-color: #FFBB72;
@@ -534,6 +559,17 @@ margin: 0 0 2.5% 4.5%;
   margin: 0 0 0 16px;
   font-size: 1.25em;
 }
+#adminarticle ul{
+margin: 0 10%;
+width: 80%;
+}
+#adminarticle ul li{
+  font-size: 2em;
+  margin: 5% 0;
+}
+#adminarticle a{
+  text-decoration: none;
+}
 #logout a{
   text-shadow: 1px 1px 1px #fff;
 }
@@ -542,8 +578,12 @@ margin: 0 0 2.5% 4.5%;
   text-decoration: none;
   text-shadow: 1px 1px 1px #777;
 }
-#logout{
+#userlogout{
   margin: 0 0 0 3.85%;
+}
+#logout{
+  margin: 0 0 0 18.85%;
+  height: 100px;
 }
 #college, #middleschool, #highschool{
   padding: 0 0 0 1%;
@@ -557,6 +597,7 @@ margin: 0 0 2.5% 4.5%;
     border-radius: 20%;
     box-shadow: 5px 0 10px 0 #999;
 }
+
 #contactus h2, #contactus p{
   width: 95%;
   margin: 0 0 0 1.3%;
@@ -595,7 +636,53 @@ margin: 0 0 2.5% 4.5%;
  margin: -9px 0 0 0;
 
 }
-#goals a{
+#changegraph{
+  text-align: center;
+}
+#changegraph select{
+  border-radius: 10px;
+  border-top-color: #FFBB72;
+  border-right-color: #FFBB72;
+  border-bottom-color: #FF8400;
+  border-left-color: #FF8400;
+  border-width: 3px;
+  margin: -5.2% -1% -3.5% 0;
+  height: 7%; 
+}
+#changegraph button{
+  line-height: 45px;
+  margin: -2% 0 0 2%;
+  width: 230px;
+  font: 1.125em 'Corbel';
+  color: #FFF;
+  background-image: -moz-linear-gradient(top, #FE291F, #B21D16);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FE291F), to(#B21D16));
+  background-image: -webkit-linear-gradient(top, #FE291F, #B21D16);
+  background-image: -o-linear-gradient(top, #FE291F, #B21D16);
+  background-image: linear-gradient(to bottom, #FE291F, #B21D16);
+  background-repeat: repeat-x;
+  border-style: solid;
+  border-color: #FFF #FFF;
+  border-width: 3px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 2px 1px #AAAAAA, 1px 0 1px 0 #AAAAAA, 0 2px 0 0 #AAAAAA;
+}
+#changegraph button:hover{ background-image: -moz-linear-gradient(top, #FF5D55, #FE291F);
+   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF5D55), to(#FE291F));
+   background-image: -webkit-linear-gradient(top, #FF5D55, #FE291F);
+   background-image: -o-linear-gradient(top, #FF5D55, #FE291F);
+   background-image: linear-gradient(to bottom, #FF5D55, #FE291F);
+ }
+ #changegraph button:hover{ background-image: -moz-linear-gradient(top, #FF5D55, #FE291F);
+   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF5D55), to(#FE291F));
+   background-image: -webkit-linear-gradient(top, #FF5D55, #FE291F);
+   background-image: -o-linear-gradient(top, #FF5D55, #FE291F);
+   background-image: linear-gradient(to bottom, #FF5D55, #FE291F);
+ }
+ #changegraph button:active{
+  box-shadow: -1px 0 1px 0 #AAAAAA, 1px 0 1px 0 #AAAAAA, 0 2px 0 0 #AAAAAA;
+}
+  #goals a{
   line-height: 45px;
   text-decoration: none;
   margin: 0;
@@ -629,6 +716,32 @@ margin: 0 0 2.5% 4.5%;
   text-align: left;
   color:#ff8400;
   font-weight: bold;
+}
+#adminpage{
+  margin: 0 0 0 27%;
+}
+#adminsection{
+  margin: 0 0 0 21%;
+}
+#admdate{
+  margin: 0 0 0 27%;
+}
+#title{
+  margin: 0 0 0 28%;
+}
+#username{
+  margin: 0 0 0 1%;
+  width:  342px;
+  font-size: .6em;
+}
+#tiplist{
+margin: 0 0 10px 20px;
+}
+#logout button{
+  margin: 0 0 0 19%;
+}
+#logout h5{
+  text-align: center;xs
 }
 /* ------------------  Fonts ------------------- */
 

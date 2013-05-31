@@ -1,5 +1,5 @@
 <div class="row">
-	<div class='span3' id="logout">
+	<div class='span3' id="userlogout">
 		<p>Hi <?php echo $name ?>,  <a href="http://localhost:8888/index.php/s2e/logout">logout</a></p>
 	</div>
 </div>

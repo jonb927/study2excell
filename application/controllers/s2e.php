@@ -5,41 +5,38 @@ class S2e extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('s2eModel');
-		$this->load->model('s2eJson');
+		$this->load->model('s2econtent');
+		$this->load->model('s2egraph');
 	}
 	public function index()// home page
 	{
-		//$this->session->unset_userdata('aUserLogin');
+		
 		$sd = $this->session->all_userdata();
-		//$this->load->library('calendar');
-		//$length = count($sd);
-		//if($sd['userID']===NULL){print_r('empty');}else{print_r('Full');}
-		//var_dump($sd);
-			if ( count($sd) <= 5){
-				$data['page_title'] = 'STUDY2EXCELL';
-
+		
+		$row = $this->s2econtent->getHomeArticles();
+		$data['page_title'] = 'STUDY2EXCELL';
+		$data['MTitle'] = $row[0]['aMainTitle'];
+		$data['MContent'] = $row[0]['aMainContent'];
+		$data['QTitle'] = $row[0]['aQuickTitle'];
+		$data['QContent'] = $row[0]['aQuickContent'];
+		$data['FTitle'] = $row[0]['aFeaturedTitle'];
+		$data['FContent'] = $row[0]['aFeaturedContent'];
+			if ( count($sd) <= 5 || $sd['Login'] === FALSE){
+				
 				//Load Page View
 				$this->load->view('header', $data);
-				$this->load->view('home');
+				$this->load->view('home', $data);
 				$this->load->view('footer');
 			}else{
-
-				$data['page_title'] = 'STUDY2EXCELL';
 				$data['name'] = element('Name',$sd);
+			
 				//Load Page View
 				$this->load->view('header', $data);
 				$this->load->view('logout', $data);
-				$this->load->view('home');
+				$this->load->view('home', $data);
 				$this->load->view('footer');
-			}/*
+			}
 		
-		$now= time();
-		$datestring = "Year: %Y Month: %m Day: %d - %h:%i %a";
-		$date= mdate($datestring);
-		$tnow= unix_to_human($now);
-		//var_dump($now);
-		//var_dump($date);
-		//var_dump($tnow);*/
 	}
 	public function login(){// login page
 		//Set page title
@@ -53,6 +50,8 @@ class S2e extends CI_Controller {
 	public function logout(){
 		$sd = array('Name' => '', 'Email' => '', 'userID' => '', 'Login' => '', 'Subject' => '');
 		$this->session->unset_userdata($sd);
+		$newdata = array('Login' => FALSE);
+		$this->session->set_userdata($newdata);
 		redirect('/s2e');
 	}
 	public function loginfail(){// login fail page
@@ -66,12 +65,22 @@ class S2e extends CI_Controller {
 	}
 	public function tips(){// tips page
 		$sd = $this->session->all_userdata();
-		if ( count($sd) <= 5){
+		$row = $this->s2econtent->getTipArticles();
+		$data['page_title'] = 'STUDY2EXCELL';
+		$data['MTitle'] = $row[0]['aMainTitle'];
+		$data['MContent'] = $row[0]['aMainContent'];
+		$data['S1Title'] = $row[0]['aSubTitle1'];
+		$data['S1Content'] = $row[0]['aSubTitle1Content'];
+		$data['S2Title'] = $row[0]['aSubTitle2'];
+		$data['S2Content'] = $row[0]['aSubTitle2Content'];
+		$data['S3Title'] = $row[0]['aSubTitle3'];
+		$data['S3Content'] = $row[0]['aSubTitle3Content'];
+		if ( count($sd) <= 5 || $sd['Login'] === FALSE){
 				$data['page_title'] = 'STUDY2EXCELL | Tips';
 
 				//Load Page View
 				$this->load->view('header', $data);
-				$this->load->view('tips');
+				$this->load->view('tips', $data);
 				$this->load->view('footer');
 			}else{
 
@@ -80,13 +89,33 @@ class S2e extends CI_Controller {
 				//Load Page View
 				$this->load->view('header', $data);
 				$this->load->view('logout', $data);
-				$this->load->view('tips');
+				$this->load->view('tips', $data);
+				$this->load->view('footer');
+			}
+	}
+	public function tiplist(){
+		$sd = $this->session->all_userdata();
+		if ( count($sd) <= 5 || $sd['Login'] === FALSE){
+				$data['page_title'] = 'STUDY2EXCELL | Tip List';
+
+				//Load Page View
+				$this->load->view('header', $data);
+				$this->load->view('tiplist');
+				$this->load->view('footer');
+			}else{
+
+				$data['page_title'] = 'STUDY2EXCELL | Tip List';
+				$data['name'] = element('Name',$sd);
+				//Load Page View
+				$this->load->view('header', $data);
+				$this->load->view('logout', $data);
+				$this->load->view('tiplist');
 				$this->load->view('footer');
 			}
 	}
 	public function sTrack(){// strack page
 		$sd = $this->session->all_userdata();
-		if ( count($sd) <= 5){
+		if ( count($sd) <= 5 || $sd['Login'] === FALSE){
 				$data['page_title'] = 'STUDY2EXCELL | sTrack';
 
 				//Load Page View
@@ -106,7 +135,7 @@ class S2e extends CI_Controller {
 	}
 	public function about(){// about page
 		$sd = $this->session->all_userdata();
-		if ( count($sd) <= 5){
+		if ( count($sd) <= 5 || $sd['Login'] === FALSE){
 				$data['page_title'] = 'STUDY2EXCELL | About';
 
 				//Load Page View
@@ -126,7 +155,7 @@ class S2e extends CI_Controller {
 	}
 	public function contact(){//contact page
 		$sd = $this->session->all_userdata();
-		if ( count($sd) <= 5){
+		if ( count($sd) <= 5 || $sd['Login'] === FALSE){
 				$data['page_title'] = 'STUDY2EXCELL | Contact';
 
 				//Load Page View
@@ -146,7 +175,7 @@ class S2e extends CI_Controller {
 	}
 	public function howdoyoulearn(){// how do you learn page
 		$sd = $this->session->all_userdata();
-		if ( count($sd) <= 5){
+		if ( count($sd) <= 5 || $sd['Login'] === FALSE){
 				$data['page_title'] = 'STUDY2EXCELL | How Do You Learn';
 
 				//Load Page View
@@ -166,56 +195,77 @@ class S2e extends CI_Controller {
 	}
 	public function middleschool(){// middleschool page
 		$sd = $this->session->all_userdata();
-		if ( count($sd) <= 5){
-				$data['page_title'] = 'STUDY2EXCELL | Middle School';
-
+		$row = $this->s2econtent->getMiddleschoolArticles();
+		$data['page_title'] = 'STUDY2EXCELL | Middle School';
+		$data['MTitle'] = $row[0]['aMainTitle'];
+		$data['MContent'] = $row[0]['aMainContent'];
+		$data['S1Title'] = $row[0]['aSubTitle1'];
+		$data['S1Content'] = $row[0]['aSubTitle1Content'];
+		$data['S2Title'] = $row[0]['aSubTitle2'];
+		$data['S2Content'] = $row[0]['aSubTitle2Content'];
+		$data['S3Title'] = $row[0]['aSubTitle3'];
+		$data['S3Content'] = $row[0]['aSubTitle3Content'];
+		if ( count($sd) <= 5 || $sd['Login'] === FALSE){
 				//Load Page View
 				$this->load->view('header', $data);
-				$this->load->view('middleschool');
+				$this->load->view('middleschool', $data);
 				$this->load->view('footer');
 			}else{
 
-				$data['page_title'] = 'STUDY2EXCELL | Middle School';
 				$data['name'] = element('Name',$sd);
 				//Load Page View
 				$this->load->view('header', $data);
 				$this->load->view('logout', $data);
-				$this->load->view('middleschool');
+				$this->load->view('middleschool', $data);
 				$this->load->view('footer');
 			}
 	}
 	public function highschool(){// highschool page
 		$sd = $this->session->all_userdata();
-		if ( count($sd) <= 5){
-				$data['page_title'] = 'STUDY2EXCELL | High School';
-
+		$row = $this->s2econtent->getHighschoolArticles();
+		$data['page_title'] = 'STUDY2EXCELL | High School';
+		$data['MTitle'] = $row[0]['aMainTitle'];
+		$data['MContent'] = $row[0]['aMainContent'];
+		$data['S1Title'] = $row[0]['aSubTitle1'];
+		$data['S1Content'] = $row[0]['aSubTitle1Content'];
+		$data['S2Title'] = $row[0]['aSubTitle2'];
+		$data['S2Content'] = $row[0]['aSubTitle2Content'];
+		$data['S3Title'] = $row[0]['aSubTitle3'];
+		$data['S3Content'] = $row[0]['aSubTitle3Content'];
+		if ( count($sd) <= 5 || $sd['Login'] === FALSE){
 				//Load Page View
 				$this->load->view('header', $data);
-				$this->load->view('highschool');
+				$this->load->view('highschool', $data);
 				$this->load->view('footer');
 			}else{
 
-				$data['page_title'] = 'STUDY2EXCELL | High School';
 				$data['name'] = element('Name',$sd);
 				//Load Page View
 				$this->load->view('header', $data);
 				$this->load->view('logout', $data);
-				$this->load->view('highschool');
+				$this->load->view('highschool'. $data);
 				$this->load->view('footer');
 			}
 	}
 	public function college(){// college page
 		$sd = $this->session->all_userdata();
-		if ( count($sd) <= 5){
-				$data['page_title'] = 'STUDY2EXCELL | College';
-
+		$row = $this->s2econtent->getCollegeArticles();
+		$data['page_title'] = 'STUDY2EXCELL | College';
+		$data['MTitle'] = $row[0]['aMainTitle'];
+		$data['MContent'] = $row[0]['aMainContent'];
+		$data['S1Title'] = $row[0]['aSubTitle1'];
+		$data['S1Content'] = $row[0]['aSubTitle1Content'];
+		$data['S2Title'] = $row[0]['aSubTitle2'];
+		$data['S2Content'] = $row[0]['aSubTitle2Content'];
+		$data['S3Title'] = $row[0]['aSubTitle3'];
+		$data['S3Content'] = $row[0]['aSubTitle3Content'];
+		if ( count($sd) <= 5 || $sd['Login'] === FALSE){
 				//Load Page View
 				$this->load->view('header', $data);
 				$this->load->view('college');
 				$this->load->view('footer');
 			}else{
 
-				$data['page_title'] = 'STUDY2EXCELL | College';
 				$data['name'] = element('Name',$sd);
 				//Load Page View
 				$this->load->view('header', $data);
@@ -228,7 +278,7 @@ class S2e extends CI_Controller {
 		
 		$sd = $this->session->all_userdata();
 		////var_dump($sd);
-		if ( count($sd) <= 5){
+		if ( count($sd) <= 5 || $sd['Login'] === FALSE){
 				//Set page title
 		$data['page_title'] = 'STUDY2EXCELL | Login';
 
@@ -268,8 +318,8 @@ class S2e extends CI_Controller {
 	public function subjects(){// subjects page
 		
 		$sd = $this->session->all_userdata();
-		//var_dump($sd);
-		if ( count($sd) <= 5){
+
+		if ( count($sd) <= 5 || $sd['Login'] === FALSE){
 				//Set page title
 		$data['page_title'] = 'STUDY2EXCELL | Register';
 
@@ -281,17 +331,14 @@ class S2e extends CI_Controller {
 			$subject = $this->session->userdata('Subject');
 			if($subject == 'None'){redirect('/s2e/cnewstrack');}
 			//get subject names
-			$subjects = $this->s2eJson->getSubjects($sd);
+			$subjects = $this->s2egraph->getSubjects($sd);
 			$subject = $this->session->userdata('Subject');
-			//var_dump($subject);
+			
 			$uid = array('aUserID' => element('userID',$sd));
 			$sub = $this->s2eModel->getSubjectID($subject);
-			////var_dump($sub);
 			$subid = $sub[0];
-			//var_dump($subid);
-			////var_dump($uid);
 			$gdata = $this->s2eModel->getGraphData($subid, $uid);
-			//var_dump($gdata);
+
 			$n = count($gdata);
 			while($n < 5){
 				array_push($gdata, array('aStudyTime' => 0, 'aStudyDate' => ' ', 'aCurrentGrade' => 0, 'aStudyGoal' => ' '));
@@ -312,6 +359,36 @@ class S2e extends CI_Controller {
 			
 			}
 		
+	}
+	public function changegraph(){
+			$sd = $this->session->all_userdata();
+			$this->load->library('form_validation');
+			$this->form_validation->set_error_delimiters('<div id="rerror">', '</div>');
+			$subjects = $this->s2egraph->getSubjects($sd);
+			$subject = $this->input->post('csub');
+			
+			$uid = array('aUserID' => element('userID',$sd));
+			$sub = $this->s2eModel->getSubjectID($subject);
+			$subid = $sub[0];
+			$gdata = $this->s2eModel->getGraphData($subid, $uid);
+
+			$n = count($gdata);
+			while($n < 5){
+				array_push($gdata, array('aStudyTime' => 0, 'aStudyDate' => ' ', 'aCurrentGrade' => 0, 'aStudyGoal' => ' '));
+				$n++;
+			}
+
+			$data['page_title'] = 'STUDY2EXCELL | Subjects';
+			$data['name'] = element('Name',$sd);
+			$data['graph'] = $gdata;
+			$data['subname'] = ucfirst($subject);
+			$data['subjects'] = $subjects;
+
+				//Load Page View
+			$this->load->view('header', $data);
+			$this->load->view('logout', $data);
+			$this->load->view('subjects', $data);
+			$this->load->view('footer');
 	}
 	public function register(){// register page
 		//Set page title
@@ -366,8 +443,6 @@ class S2e extends CI_Controller {
 				'Subject' => 'None'
 				);
 			$this->session->set_userdata($newdata);
-			
-			
 			redirect('/s2e');
 
 			}
@@ -400,7 +475,7 @@ class S2e extends CI_Controller {
 		} else {
 
 			$row = $this->s2eModel->getUsernamePass($email, $pass);//calls function to check email and password	
-		
+			//$row1 = $this->s2egraph->getSubjects();
 			if (!empty($row))
 			{
 				//if row is not empty get name and id
@@ -415,6 +490,14 @@ class S2e extends CI_Controller {
 				);
 			// set new session data
 			$this->session->set_userdata($newdata);
+			$sd1 = $this->session->all_userdata();
+			$row1 = $this->s2egraph->getLastSubject($sd1);
+			//var_dump($row1[0]['aSubjectName']);
+			$newdata = array(
+				'Subject' => $row1[0]['aSubjectName']
+				);
+			$this->session->set_userdata($newdata);
+
 			redirect('/s2e');
 			} else {
 				// redirect to fail 
@@ -560,7 +643,7 @@ class S2e extends CI_Controller {
 			
 				// Load page again
 			$sd = $this->session->all_userdata();
-			$subjects = $this->s2eJson->getSubjects($sd);
+			$subjects = $this->s2egraph->getSubjects($sd);
 
 				
 			$data['page_title'] = 'STUDY2EXCELL | Subjects';

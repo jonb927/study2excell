@@ -33,7 +33,7 @@
 
 		<!-- Header includes logo site navigation, breadcrumbs  -->
 	   	
-	   	<div class="row">
+	   	<div class="row" id="wrapper">
 	   		<div class="span12" id="header">
 	   			<div class="row">
 		   			<div class="span4"id="logo">

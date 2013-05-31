@@ -9,7 +9,21 @@
             </div>
 
             <!-- Main content section is divided into main CTA and Sub CTA 
-            Main CTA                                                       -->
+            Main CTA                         -->
+            <div class="span8 offset2" id="changegraph">
+                <?php echo validation_errors(); ?>
+                        <?php echo form_open('s2e/changeGraph'); ?>
+                        <select id="csub" name="csub">
+                            <?php  for ($i = 0; $i < count($subjects);$i++) {
+                                echo '<option>';
+                                echo $subjects[$i]['aSubjectName'];
+                                echo '</option>';
+                            };
+                            ?>
+                       </select>
+                       <button type"submit" >Change Subject</button>   
+                    </form>
+            </div>                            
             <div class="span6 offset3" id="graph">
                 <script type="text/javascript">
                     $(function(){ 
@@ -50,7 +64,7 @@
                     <!--<img src="http://localhost:8888/images/graphPHV001.png">-->
                     <div class="span6 offset3" id="goals">
                         <h6><a href="http://localhost:8888/index.php/s2e/newstrack">Create new sTrack</a></h6>
-                        <h3>Study Goals</h3>
+                        <h2>Study Goals</h2>
                         <ul>
                             <li><h6><?php echo $graph[0]['aStudyDate']?></h6><p><?php echo $graph[0]['aStudyGoal']?></p></li>
                             <li><h6><?php echo $graph[1]['aStudyDate']?></h6><p><?php echo $graph[1]['aStudyGoal']?></p></li>

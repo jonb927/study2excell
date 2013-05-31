@@ -1,0 +1,235 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+/* ------------------  Clearfix ------------------- */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+* html .clearfix {
+    height: 1%;
+}
+
+/* ------------------  Start Main CSS ------------------- */
+
+body{
+    max-width:960px;
+    min-height: 700px;
+    margin: 0 auto; 
+    background-image: url(../images/mainBGV001.png);
+}
+header{
+    background: url(../images/headerBGV001.png) no-repeat;
+}
+header p{
+    line-height: 100px;
+    text-align: right;
+}
+/* -------------------- Navigation ------------------------*/
+nav{
+    height:50px;
+}
+nav ul{
+    margin: 0 2.083333%;
+    float: right;
+    width: 60%;
+    text-align: right;
+}
+nav ul li{
+    float: left;
+    width: 16.666666%;
+}
+nav ul li a{
+    display: block;
+    font: 24px 'Century Gothic';
+    font-variant: small-caps;
+    color: #555;
+    text-align: center;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #40C1E5;
+}
+nav a:active{
+    color: #40C1E5;
+}
+
+footer{
+    height: 280px;
+    background: url(../images/footerBGV001.jpg) no-repeat;
+}
+cite{
+    font: .80em 'Century Gothic';
+    font-style: italic;
+}
+
+/* ------------------  Classes and ID's ------------------- */
+
+.maincontent{
+}
+#maincta{
+    height: 340px;
+    background-image: url(../images/mainCtaBGV001.png);
+}
+#maincta :nth-child(1){
+    width: 31.25%;
+    float: right;
+}
+#maincta :nth-child(2){
+    width: 62.5%;
+}
+#maincta :nth-child(1){
+    width: 31.25%;
+    float: right;
+}/**/
+#headerwrap{
+    width: 100%;
+}
+#headerwrap p{
+    display: inline-block;
+    margin: 0 0 0 11.16666%;
+    font: 1.6em 'Bell MT';
+    color: #fff;
+    line-height: 20px;
+    padding: 4.166666% 0 0;
+
+}
+#logo{
+    margin: .888888% 2.083333%;
+    float: left;
+}
+.mainnav{
+
+}
+.mainnav li:hover > #tips, .mainnav li:hover > #strack{
+    display: block;
+    position: absolute;
+   
+}
+.subnav{
+    display: none;
+    position: absolute;
+    left: 41%;
+}
+.subnav li a{
+    font: .8em 'Century Gothic';
+    font-variant: small-caps;
+    color: #40C1E5;
+    text-align: center;
+    text-decoration: none;
+}
+.subnav a:hover{
+    font-size: .9em;
+}
+#tips{
+    width: 35%; 
+}
+#tips li{
+    width: 25%;
+}
+#strack{
+    width: 12%;
+    left: 58.2%;
+}
+#strack li{
+    width: 50%;
+}
+#topfoot{
+    width: 100%;
+    height: 75%;
+}
+#botfoot{
+    font: .75em 'Century Gothic';
+    width: 100%;
+    height: 25%;
+    line-height: 70px;
+    text-align: center;
+}
+
+/* ------------------  Fonts ------------------- */
+
+@font-face
+{
+    font-family: Palatino Linotype;
+    src: url('Palatino.ttc')
+        ,url('Palatino Linotype.ttf')
+        ,url('Palatino Linotype Bold.ttf')
+        ,url('Palatino Linotype Bold Italic.ttf')
+        ,url('Palatino Linotype Italic.ttf');
+}
+

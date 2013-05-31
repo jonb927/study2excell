@@ -1,0 +1,420 @@
+h1{
+	font: 3.75em 'Bell MT';
+	font-style: italic;
+	color: #FE291F;
+}
+h2{
+	font: 2.5em 'Palatino Linotype';
+	color: #FF8400;
+}
+h3{
+	font: 1.875em 'Palatino Linotype';
+	color: #40C1E5;
+}
+h4{
+	font: 3.125em 'Bell MT';
+	font-style: italic;
+	color: #777;
+}
+h5{
+  font: 3.125em 'Corbel';
+  color: #555;
+}
+p{
+	font: 1em 'Century Gothic';
+	color: #393939;
+}
+a{
+	color: #40C1E5;
+	text-decoration: none;
+}
+#BG{
+  background-image: url(../images/mainBGV001.png);
+}
+#header{
+	height: 110px;
+    background: url(../images/headerBGV001.png) no-repeat;
+}
+#logo img{
+	padding: 2.02% 4.553191%;
+}
+#header p{
+	font: 1.6em 'Bell MT';
+    color: #fff;
+    padding: 5%;
+    text-align: right;
+}
+
+nav{
+    height:50px;
+}
+nav ul{
+    margin: 0 2.083333%;
+    float: right;
+    width: 70%;
+    text-align: right;
+    list-style-type: none;
+}
+nav ul li{
+    float: left;
+    width: 16.666666%;
+}
+nav ul li a{
+    display: block;
+    font: 24px 'Century Gothic';
+    font-variant: small-caps;
+    color: #555;
+    text-align: center;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #40C1E5;
+	text-decoration: none;
+}
+nav a:active{
+    color: #40C1E5;
+}
+
+cite{
+    font: .80em 'Century Gothic';
+    font-style: italic;
+}
+
+.mainnav{
+
+}
+.mainnav li:hover > #tips, .mainnav li:hover > #strack{
+    display: block;
+    position: absolute;
+   
+}
+.subnav{
+    display: none;
+    position: absolute;
+    left: 41%;
+}
+.subnav li a{
+    font: .8em 'Century Gothic';
+    font-variant: small-caps;
+    color: #40C1E5;
+    text-align: center;
+    text-decoration: none;
+}
+.subnav a:hover{
+    font-size: .9em;
+}
+#tips{
+    width: 35%; 
+}
+#tips li{
+    width: 25%;
+}
+#tiplist{
+  background-color: #fff;
+  border-radius: 10px;
+}
+#tiplist h3{
+  margin: 0 0 0 7%;
+}
+#tiplist ul{
+  list-style-type: none;
+  margin: 0 0 0 11%;
+}
+#strack{
+    width: 12%;
+    left: 58.2%;
+}
+#strack li{
+    width: 50%;
+}
+
+#maincta{
+    height: 336px;
+    background-image: url(../images/mainCtaBGV001.png);
+    background-position: center center;
+}
+#maincta img{
+	padding: 5% 15%;
+    width: 75%;
+}
+#maincta h2{
+	padding: 6% 0 0 0;
+}
+#maincta p{
+	padding: 0 16% 0 0;
+	font-size: 1.125em;
+}
+#subcta{
+	 background-image: url(../images/);
+	 background-position: center center;
+	 background-repeat: no-repeat;
+     background-size: 100% auto;
+     height: 400px;
+}
+#subcta1{
+	 background-image: url(../images/);
+	 background-position: center center;
+	 background-repeat: no-repeat;
+     background-size: 100% auto;
+     height: 400px;
+}
+#footer{
+    height: 280px;
+    background: url(../images/footerBGV001.jpg) no-repeat;
+}
+#topfoot{
+    height: 210px;
+}
+#topfoot a{
+	color: #2e77a1;
+	font-size: 1.125em;
+	text-decoration: none;
+	line-height: 35px;
+}
+#topfoot a:hover{
+	color: #fff;
+}
+#topfoot ul{
+	list-style-type: none;
+}
+#topfoot ul li{
+	display: inline-block;
+	width: 30%;
+}
+#topfoot h3{
+	color: #fff;
+}
+#botfoot{
+    font: .75em 'Century Gothic';
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+}
+#botfoot p{
+	line-height: 70px;
+}
+
+#TOTD img{
+	padding: 1% 13%;
+
+}
+#strackbtn{
+	list-style-type: none;
+	width: 70%;
+	margin: 0 auto;
+	padding: 3% 0 18% 2.5%;
+
+}
+#strackbtn li{
+	text-align: center; 
+	width: 45%;
+	height: 130px;
+}
+#strackbtn a{
+	color: #fff;
+	font-size: 60px;
+	line-height: 1;
+	text-decoration: none;
+}
+
+#newstrack{
+	float: left;
+  background-color: #006dcc;
+  *background-color: #FE291F;
+  background-image: -moz-linear-gradient(top, #FE291F, #B21D16);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FE291F), to(#B21D16));
+  background-image: -webkit-linear-gradient(top, #FE291F, #B21D16);
+  background-image: -o-linear-gradient(top, #FE291F, #B21D16);
+  background-image: linear-gradient(to bottom, #FE291F, #B21D16);
+  background-repeat: repeat-x;
+  border-style: solid;
+  border-color: #FFF #FFF;
+  border-width: 5px;
+  border-radius: 20px;
+	
+
+}
+#updatestrack{
+	float: right;
+  background-color: #006dcc;
+  *background-color: #40C1E5;
+  background-image: -moz-linear-gradient(top, #40C1E5, #33A3C2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#40C1E5), to(#33A3C2));
+  background-image: -webkit-linear-gradient(top, #40C1E5, #33A3C2);
+  background-image: -o-linear-gradient(top, #40C1E5, #33A3C2);
+  background-image: linear-gradient(to bottom, #40C1E5, #33A3C2);
+  background-repeat: repeat-x;
+  border-style: solid;
+  border-color: #FFF #FFF;
+  border-width: 5px;
+  border-radius: 20px;
+}
+#login, #contact, #register, #subject, #nstrack{
+  height: 400px;
+  background-image: url(../images/formBGV001.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:  98% 100%;
+  padding: 4% 0 10%;
+}
+#contact {
+  background-size: 100% 106%;
+}
+#subject{
+  background-size: 104% 107%;
+    height: 460px;
+    padding: 4% 0 10%;
+}
+#nstrack{
+  background-size: 106% 106%;
+    height: 460px;
+    padding: 4% 0 10%;
+}
+#login h5, #register h5{
+  padding: 5% 0 0 10%;
+}
+#contact h5{
+  padding: 2% 0 0 20%;
+}
+#subject h5, #nstrack h5, #nstrack h5{
+  padding: 2% 0 0 15%;
+}
+#login p, #contact p, #login a, #register a, #subject a #nstrack a{
+font: 28px 'Corbel';
+ padding: 0 0 0 8%;
+}
+#login form, #register form{
+  padding: 5% 0 5% 10%;
+}
+#contact form{
+  padding: 5% 0 5% 20%;
+ }
+#subject form, #nstrack form{
+  padding: 1% 0 5% 15%;
+ }
+#login label, #contact label, #register label, #subject label, #nstrack label{
+  font: 2.1875em 'Corbel';
+  color: #555;
+}
+#login input, #contact input, #register input, #subject input, #nstrack input{
+  border-radius: 10px;
+  border-top-color: #FFBB72;
+  border-right-color: #FFBB72;
+  border-bottom-color: #FF8400;
+  border-left-color: #FF8400;
+  border-width: 3px;
+
+}
+#login ul, #contact ul, #register ul, #subject ul, #nstrack ul{
+  margin: 0;
+  width: 95%;
+}
+#login ul li, #contact ul li, #register ul li, #subject ul li, #nstrack ul li{
+  list-style-type: none;
+  width: 100%;
+}
+#subject ul li{
+  padding: 0 0 2% 0;
+}
+#login button, #contact button, #register button, #subject button, #nstrack button{
+  line-height: 45px;
+  width: 130px;
+  margin: 0 0 0 47.5%;
+  font: 2.125em 'Corbel';
+  color: #FFF;
+  background-image: -moz-linear-gradient(top, #FE291F, #B21D16);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FE291F), to(#B21D16));
+  background-image: -webkit-linear-gradient(top, #FE291F, #B21D16);
+  background-image: -o-linear-gradient(top, #FE291F, #B21D16);
+  background-image: linear-gradient(to bottom, #FE291F, #B21D16);
+  background-repeat: repeat-x;
+  border-style: solid;
+  border-color: #FFF #FFF;
+  border-width: 5px;
+  border-radius: 20px;
+  box-shadow: -1px 0 1px 0 #AAAAAA, 1px 0 1px 0 #AAAAAA, 0 2px 0 0 #AAAAAA;
+}
+#contact button{
+  margin: 0 0 0 23.5%;
+}
+#subject button{
+  margin: -1% 0 0 32.7%;
+}
+#nstrack button{
+  margin: -1% 0 0 37.5%;
+}
+#subject textarea, #nstrack textarea{
+  float: right;
+  margin: -12% 29.7% 3% 0%;
+  border-radius: 10px;
+  border-top-color: #FFBB72;
+  border-right-color: #FFBB72;
+  border-bottom-color: #FF8400;
+  border-left-color: #FF8400;
+  border-width: 3px;
+}
+#nstrack textarea{
+  margin: -15% 16.3% 3%0;
+}
+#email{
+  width: 330px;
+  margin: 0 0 2.5% 12%;
+}
+#password{
+  width: 330px;
+  margin: 0 0 2.5% 2.5%;
+}
+#emailsubject{
+margin: 0 0 2.5% 4.5%;
+}
+#emailfrom{
+  margin: 0 0 2.5% 10.75%;
+}
+#message{
+  float: right;
+  margin: -6% 28% 3% 0%;
+  border-radius: 10px;
+  border-top-color: #FFBB72;
+  border-right-color: #FFBB72;
+  border-bottom-color: #FF8400;
+  border-left-color: #FF8400;
+  border-width: 3px;
+}
+#date{
+  margin: -1% 0 0 25%;
+}
+#studytime{
+  margin: -1% 0 0 4.2%;
+}
+#grade{
+  margin: -1% 0 0 6.5%;
+}
+#nstdate{
+  margin: -1% 0 0 27%;
+}
+#nstsubject{
+  margin: -1% 0 0 20%;
+}
+#nstgrade{
+  margin: -1% 0 0 3%;
+}
+
+#bread ul{
+  background-color: none;
+  margin: 0 0 0 2%;
+}
+#bread{
+  font-weight: bold;
+}
+
+/* ------------------  Fonts ------------------- */
+
+@font-face
+{
+    font-family: Palatino Linotype;
+    src: url('Palatino.ttc')
+        ,url('Palatino Linotype.ttf')
+        ,url('Palatino Linotype Bold.ttf')
+        ,url('Palatino Linotype Bold Italic.ttf')
+        ,url('Palatino Linotype Italic.ttf');
+}
